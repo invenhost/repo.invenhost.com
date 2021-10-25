@@ -1,7 +1,11 @@
-<nav>
-  {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" {% if page.url == item.link %} class="current" {% endif %}>
-      {{ item.name }}
-    </a>
-  {% endfor %}
-</nav>
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+    <span class="fs-4 ps-4">Plugin Repo for InvenTree</span>
+  </a>
+
+  <ul class="nav nav-pills">
+    {% for item in site.data.navigation %}
+      <li class="nav-item"><a href="{{ item.link }}" class="nav-link{% if page.url == item.link %} active{% endif %}">{{ item.name }}</a></li>
+    {% endfor %}
+  </ul>
+</header>
