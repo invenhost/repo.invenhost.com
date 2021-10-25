@@ -1,0 +1,18 @@
+---
+layout: default
+title: Home
+---
+
+<h1>Plugins for InvenTree!</h1>
+
+<ul>
+    {% for plugin in site.plugins %}
+      <li>
+        <h2><a href="{{ plugin.url }}">{{ plugin.name }}</a></h2><p>by {{ plugin.publisher }}</p>
+        {% if plugin.tags %}
+            <span>{{ plugin.tags }}</span>
+        {% endif %}
+        <p>{{ plugin.excerpt | mardownify }}</p>
+      </li>
+    {% endfor %}
+  </ul>

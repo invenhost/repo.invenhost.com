@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<span><h1>{{ page.name }}</h1>{% if page.github %}  <a href="{{page.github}}">Repos</a>{% endif %}</span>
+
+{{ content }}
+
+{% if page.website %}
+<a href="{{page.website}}">Official Website</a>
+{% endif %}
+
+{% assign filtered_posts = site.posts | where: 'publisher', page.short_name %}
+{% if filtered_posts and filtered_posts.size != 0 %}
+<h2>Posts</h2>
+<ul>
+  
+  {% for post in filtered_posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}
