@@ -1,4 +1,4 @@
-name: Jekyll site CI
+name: Build pages and publish
 
 on:
   push:
@@ -21,6 +21,6 @@ jobs:
           ${{ runner.os }}-gems-
     - uses: helaili/jekyll-action@2.2.0
       with:
-        token: ${{ secrets.PUSH_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         jekyll_src: 'docs'
         target_branch: 'gh-pages'
