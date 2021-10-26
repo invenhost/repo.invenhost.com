@@ -6,11 +6,15 @@ layout: default
   {{ page.name }}
 </h1>
 
-{{ content }}
+<div>
+{% if page.github %}
+<a href="https://github.com/{{page.github}}"><span class="badge bg-secondary">GitHub</span></a>
+{% endif %}
 
 {% if page.website %}
-<a href="{{page.website}}">Official Website</a>
+<a href="{{page.website}}"><span class="badge bg-secondary">Official Website</span></a>
 {% endif %}
+</div>
 
 <blockquote class="blockquote">
   <p class="mb-0">{{ content }}</p>
