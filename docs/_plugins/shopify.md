@@ -1,5 +1,4 @@
 ---
-slug: shopify
 name: ShopifyIntegrationPlugin
 publisher: matmair
 website: https://mjmair.com
