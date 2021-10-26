@@ -10,7 +10,11 @@ title: Home
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
           {% if plugin.tags %}
-          <strong class="d-inline-block mb-2">{{ plugin.tags }}</strong>
+          <div class="d-inline-block">
+            {% for tag in plugin.tags %}
+            <span class="badge rounded-pill bg-info">{{ tag }}</span>
+            {% endfor %}
+          </div>
           {% endif %}
           <h3 class="mb-0">
             <img src="https://github.com/{{ plugin.publisher }}.png?size=40" alt="mdo" class="rounded-circle" width="32" height="32">  
