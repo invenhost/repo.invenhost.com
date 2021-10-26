@@ -3,6 +3,17 @@ layout: default
 title: Home
 ---
 
+
+  {% for post in site.posts limit:1 %}
+  <div class="p-4 mb-4 text-white rounded bg-grad-primary">
+    <div class="px-0">
+      <h1 class="display-4 fst-italic">{{post.title}}</h1>
+      <p class="lead my-3">{{post.excerpt}}</p>
+      <p class="lead mb-0"><a href="{{post.url}}" class="text-white fw-bold">Continue reading...</a></p>
+    </div>
+  </div>
+  {% endfor %}
+
   <div class="row g-5">
     <div class="col-md-8">
       {% for plugin in site.plugins %}
