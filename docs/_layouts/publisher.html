@@ -29,3 +29,13 @@ layout: default
   {% endfor %}
 </ul>
 {% endif %}
+
+{% assign filtered_plugins = site.plugins | where: 'publisher', page.short_name %}
+{% if filtered_plugins and filtered_plugins.size != 0 %}
+<h3>Plugins</h3>
+<ul class="list-unstyled">
+  {% for plugin in filtered_plugins %}
+    <li>{{ plugin.title }}</li>
+  {% endfor %}
+</ul>
+{% endif %}
