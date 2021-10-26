@@ -9,7 +9,6 @@
             {% endfor %}
           </div>
           <h3 class="mb-0">
-            <img src="https://github.com/{{ plugin.publisher }}.png?size=40" alt="mdo" class="rounded-circle" width="32" height="32">  
             {{ plugin.name }}
           </h3>
           <div class="mb-1 text-muted">{% if plugin.published_on %}{{ plugin.published_on | date_to_string }} - {% endif %}by {{ plugin.publisher }}</div>
