@@ -22,7 +22,7 @@ title: Home
           </h3>
           <div class="mb-1 text-muted">{% if plugin.published_on %}{{ plugin.published_on | date_to_string }} - {% endif %}by {{ plugin.publisher }}</div>
           <p class="mb-auto">{{ plugin.excerpt | mardownify }}</p>
-          <a href="{{ plugin.url }}" class="stretched-link">open plugin page</a>
+          <a href="{{ plugin.url }}" class="stretched-link" aria-label="open plugin details"></a>
         </div>
       </div>
 
