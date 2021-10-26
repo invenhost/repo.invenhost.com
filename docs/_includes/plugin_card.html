@@ -1,12 +1,13 @@
 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          {% if plugin.tags %}
           <div class="d-inline-block">
+            {% for cat in plugin.categories %}
+            <span class="badge rounded-pill bg-warning">{{ cat }}</span>
+            {% endfor %}
             {% for tag in plugin.tags %}
             <span class="badge rounded-pill bg-info">{{ tag }}</span>
             {% endfor %}
           </div>
-          {% endif %}
           <h3 class="mb-0">
             <img src="https://github.com/{{ plugin.publisher }}.png?size=40" alt="mdo" class="rounded-circle" width="32" height="32">  
             {{ plugin.name }}
