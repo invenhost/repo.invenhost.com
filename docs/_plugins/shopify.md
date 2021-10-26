@@ -2,11 +2,14 @@
 slug: shopify
 name: ShopifyIntegrationPlugin
 publisher: matmair
-website: https:\\mjmair.com
+website: https://mjmair.com
 github: https://github.com/matmair/ShopifyIntegrationPlugin
-tags:
+categories:
     - Integration
+    - Webhook
+tags:
     - Shopify
+    - Orders
 ---
 A simple Integration into Shopify.
 
