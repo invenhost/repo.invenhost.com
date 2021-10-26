@@ -1,7 +1,10 @@
 ---
 layout: default
 ---
-<span><h1>{{ page.name }}</h1>{% if page.github %}  <a href="{{page.github}}">Repos</a>{% endif %}</span>
+<h1>
+  <img src="https://github.com/{{ page.github }}.png?size=40" alt="mdo" class="rounded-circle" width="40" height="40">
+  {{ page.name }}
+</h1>
 
 {{ content }}
 
