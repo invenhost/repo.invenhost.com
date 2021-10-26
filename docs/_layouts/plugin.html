@@ -35,7 +35,7 @@ layout: default
           <h4 class="fst-italic">Tags</h4>
           <ol class="list-unstyled">
             {% for tag in page.tags %}
-            <li><span class="badge rounded-pill bg-info">{{ tag }}</span></li>
+            <li><a href="/tags/#{{ tag | slugify }}"><span class="badge rounded-pill bg-info">{{ tag }}</span></a></li>
             {% endfor %}
           </ol>
         </div>
