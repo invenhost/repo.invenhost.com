@@ -2,11 +2,7 @@
 layout: default
 ---
 <h1>{{ page.name }}</h1>
-{% assign publisher = site.publishers | where: 'short_name', page.publisher | first %}
-<a href="{{ publisher.url }}" class="link-secondary">
-    <p class="text-muted">by <img src="https://github.com/{{ page.publisher }}.png?size=40" alt="mdo" class="rounded-circle" width="20" height="20"> {{ page.publisher }}</p>
-</a>
-
+{% include publisher_ref.html pub=page.publisher %}
 
 <div class="row g-5">
     <div class="col-md-8">
