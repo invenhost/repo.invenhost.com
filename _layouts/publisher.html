@@ -35,6 +35,7 @@ layout: default
 <h3>Plugins</h3>
 <ul class="list-unstyled">
   {% for plugin in filtered_plugins %}
+    <a href="{{ plugin.title }}"></a>
     <li>{{ plugin.title }}</li>
   {% endfor %}
 </ul>
