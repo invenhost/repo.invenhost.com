@@ -1,5 +1,5 @@
 ---
-name: ShopifyIntegrationPlugin org
+name: ShopifyIntegrationPlugin
 publisher: matmair
 website: https://mjmair.com
 github: https://github.com/matmair/ShopifyIntegrationPlugin
